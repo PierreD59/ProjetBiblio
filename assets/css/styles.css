@@ -1,20 +1,22 @@
 /* HEADER */
 header {
-  background-color: #24252a;
+  background-color: #002439;
   display: flex;
   align-items: center;
-  box-shadow: 0px 1px 5px #24252a;
+  box-shadow: 0px 1px 5px #002439;
   position: fixed;
   z-index: 50;
   width: 100%;
   height: 10vh;
-  max-height: 10vh; }
+  max-height: 10vh;
+  font-family: "Roboto", sans-serif !important; }
   header .navbar {
     width: 100%;
     height: 100%; }
   header .icon {
     font-size: 30px;
-    color: #f6f6fa; }
+    color: #E4EFF0;
+    margin-left: 15px; }
 
 footer {
   width: 100%;
@@ -23,11 +25,11 @@ footer {
   color: white;
   display: flex;
   justify-content: flex-end;
-  background-color: #24252a;
-  box-shadow: 0px -1px 5px #24252a; }
+  background-color: #002439;
+  box-shadow: 0px -1px 5px #002439; }
 
 body {
-  background: #bdc3c7; }
+  background: #4E7988; }
 
 main {
   max-width: 1200px;
@@ -47,7 +49,7 @@ main {
     .site-content .project .actuality {
       width: 100%;
       height: auto;
-      background: #f6f6fa;
+      background: #E4EFF0;
       display: flex;
       flex-direction: column;
       padding: 25px;
@@ -55,8 +57,9 @@ main {
       .site-content .project .lasted-book .news,
       .site-content .project .actuality .news {
         text-align: center;
-        color: #1e824c;
-        margin: 15px 0 15px; }
+        color: #e67e22;
+        margin: 5px 0 15px;
+        font-family: "Roboto", sans-serif; }
       .site-content .project .lasted-book .list-book,
       .site-content .project .lasted-book .list-actuality,
       .site-content .project .actuality .list-book,
@@ -68,16 +71,26 @@ main {
         .site-content .project .lasted-book .list-actuality .link,
         .site-content .project .actuality .list-book .link,
         .site-content .project .actuality .list-actuality .link {
-          color: #24252a;
+          color: #002439;
           text-decoration: none; }
+        .site-content .project .lasted-book .list-book .card .card-title,
+        .site-content .project .lasted-book .list-actuality .card .card-title,
+        .site-content .project .actuality .list-book .card .card-title,
+        .site-content .project .actuality .list-actuality .card .card-title {
+          font-family: "Roboto", sans-serif; }
+        .site-content .project .lasted-book .list-book .card .card-text,
+        .site-content .project .lasted-book .list-actuality .card .card-text,
+        .site-content .project .actuality .list-book .card .card-text,
+        .site-content .project .actuality .list-actuality .card .card-text {
+          border-top: 1px solid #e67e22;
+          padding-top: 10px;
+          width: 100%;
+          font-family: "Didact Gothic", arial; }
       .site-content .project .lasted-book .button,
       .site-content .project .actuality .button {
-        width: 100px;
-        background: #1e824c;
-        color: #f6f6fa;
+        width: auto;
+        background: #e67e22;
+        color: #E4EFF0;
         margin: auto; }
-        .site-content .project .lasted-book .button:hover,
-        .site-content .project .actuality .button:hover {
-          background: #26a65b; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -25,7 +25,7 @@
   <![endif]-->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">Byblos</a>
+      <a class="navbar-brand" href="./">La Bibliothèque de Byblos</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,13 +33,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Qui sommes-nous ?</a>
+            <a class="nav-link" href="./">Accueil</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Galerie</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Roman</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Contact</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manga</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Comic</a>
           </li>
         </ul>
         <ul class="navbar-nav">
