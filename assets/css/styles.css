@@ -1,0 +1,83 @@
+/* HEADER */
+header {
+  background-color: #24252a;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 5px #24252a;
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: 10vh;
+  max-height: 10vh; }
+  header .navbar {
+    width: 100%;
+    height: 100%; }
+  header .icon {
+    font-size: 30px;
+    color: #f6f6fa; }
+
+footer {
+  width: 100%;
+  height: 10vh;
+  max-height: 10vh;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #24252a;
+  box-shadow: 0px -1px 5px #24252a; }
+
+body {
+  background: #bdc3c7; }
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 100px; }
+
+.site-content {
+  width: 100%;
+  display: flex;
+  flex-grow: 1; }
+  .site-content .project {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center; }
+    .site-content .project .lasted-book,
+    .site-content .project .actuality {
+      width: 100%;
+      height: auto;
+      background: #f6f6fa;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      margin-top: 150px; }
+      .site-content .project .lasted-book .news,
+      .site-content .project .actuality .news {
+        text-align: center;
+        color: #1e824c;
+        margin: 15px 0 15px; }
+      .site-content .project .lasted-book .list-book,
+      .site-content .project .lasted-book .list-actuality,
+      .site-content .project .actuality .list-book,
+      .site-content .project .actuality .list-actuality {
+        width: 100%;
+        display: flex;
+        justify-content: center; }
+        .site-content .project .lasted-book .list-book .link,
+        .site-content .project .lasted-book .list-actuality .link,
+        .site-content .project .actuality .list-book .link,
+        .site-content .project .actuality .list-actuality .link {
+          color: #24252a;
+          text-decoration: none; }
+      .site-content .project .lasted-book .button,
+      .site-content .project .actuality .button {
+        width: 100px;
+        background: #1e824c;
+        color: #f6f6fa;
+        margin: auto; }
+        .site-content .project .lasted-book .button:hover,
+        .site-content .project .actuality .button:hover {
+          background: #26a65b; }
+
+/*# sourceMappingURL=styles.css.map */
