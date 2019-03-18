@@ -1,0 +1,81 @@
+@import '_variables';
+
+body {
+  background: $color_bg;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.site-content {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+
+
+  .project {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+    .lasted-book,
+    .actuality,
+    .crush {
+      width: 100%;
+      height: auto;
+      background: $color_white;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      margin-top: 150px;
+
+      .news {
+        text-align: center;
+        color: #e67e22;
+        margin: 5px 0 15px;
+        font-family: $roboto;
+
+      }
+
+      .list-book,
+      .list-actuality {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .link {
+          color: $color_dark;
+          text-decoration: none;
+        }
+
+        .card {
+          .card-title {
+            font-family: $roboto;
+          }
+
+          .card-text {
+            border-top: 1px solid #e67e22;
+            padding-top: 10px;
+            width: 100%;
+            font-family: $gothic;
+          }
+        }
+      }
+
+      .button {
+        width: auto;
+        background: #e67e22;
+        color: $color_white;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.imgSlide {
+  width: 25%;
+}
