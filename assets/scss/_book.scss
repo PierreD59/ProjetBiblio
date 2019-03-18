@@ -23,7 +23,8 @@ main {
     justify-content: center;
 
     .lasted-book,
-    .actuality {
+    .actuality,
+    .crush {
       width: 100%;
       height: auto;
       background: $color_white;
@@ -73,4 +74,8 @@ main {
       }
     }
   }
+}
+
+.imgSlide {
+  width: 25%;
 }

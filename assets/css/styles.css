@@ -46,7 +46,8 @@ main {
     align-items: center;
     justify-content: center; }
     .site-content .project .lasted-book,
-    .site-content .project .actuality {
+    .site-content .project .actuality,
+    .site-content .project .crush {
       width: 100%;
       height: auto;
       background: #E4EFF0;
@@ -55,7 +56,8 @@ main {
       padding: 25px;
       margin-top: 150px; }
       .site-content .project .lasted-book .news,
-      .site-content .project .actuality .news {
+      .site-content .project .actuality .news,
+      .site-content .project .crush .news {
         text-align: center;
         color: #e67e22;
         margin: 5px 0 15px;
@@ -63,34 +65,46 @@ main {
       .site-content .project .lasted-book .list-book,
       .site-content .project .lasted-book .list-actuality,
       .site-content .project .actuality .list-book,
-      .site-content .project .actuality .list-actuality {
+      .site-content .project .actuality .list-actuality,
+      .site-content .project .crush .list-book,
+      .site-content .project .crush .list-actuality {
         width: 100%;
         display: flex;
         justify-content: center; }
         .site-content .project .lasted-book .list-book .link,
         .site-content .project .lasted-book .list-actuality .link,
         .site-content .project .actuality .list-book .link,
-        .site-content .project .actuality .list-actuality .link {
+        .site-content .project .actuality .list-actuality .link,
+        .site-content .project .crush .list-book .link,
+        .site-content .project .crush .list-actuality .link {
           color: #002439;
           text-decoration: none; }
         .site-content .project .lasted-book .list-book .card .card-title,
         .site-content .project .lasted-book .list-actuality .card .card-title,
         .site-content .project .actuality .list-book .card .card-title,
-        .site-content .project .actuality .list-actuality .card .card-title {
+        .site-content .project .actuality .list-actuality .card .card-title,
+        .site-content .project .crush .list-book .card .card-title,
+        .site-content .project .crush .list-actuality .card .card-title {
           font-family: "Roboto", sans-serif; }
         .site-content .project .lasted-book .list-book .card .card-text,
         .site-content .project .lasted-book .list-actuality .card .card-text,
         .site-content .project .actuality .list-book .card .card-text,
-        .site-content .project .actuality .list-actuality .card .card-text {
+        .site-content .project .actuality .list-actuality .card .card-text,
+        .site-content .project .crush .list-book .card .card-text,
+        .site-content .project .crush .list-actuality .card .card-text {
           border-top: 1px solid #e67e22;
           padding-top: 10px;
           width: 100%;
           font-family: "Didact Gothic", arial; }
       .site-content .project .lasted-book .button,
-      .site-content .project .actuality .button {
+      .site-content .project .actuality .button,
+      .site-content .project .crush .button {
         width: auto;
         background: #e67e22;
         color: #E4EFF0;
         margin: auto; }
+
+.imgSlide {
+  width: 25%; }
 
 /*# sourceMappingURL=styles.css.map */

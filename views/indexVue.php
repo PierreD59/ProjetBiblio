@@ -56,10 +56,39 @@
           </div>
         </div>
         <a href="#" class="btn button">Voir toutes les actualités</a>  
-      </div>
-    
+      </div>    
     </div>
   </main>
+
+        <h1 class="news">Les Coups de coeur du mois</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <img src="../assets/img/comic.jpg" class="imgSlide" alt="...">
+                <img src="../assets/img/manga.jpg" class="imgSlide" alt="...">
+                <img src="../assets/img/livreCouv.jpg" class="imgSlide" alt="...">
+                <img src="../assets/img/bandeDessine.jpg" class="imgSlide" alt="...">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <img src="../assets/img/comic.jpg" class="imgSlide" alt="...">
+                <img src="../assets/img/manga.jpg" class="imgSlide" alt="...">
+                <img src="../assets/img/livreCouv.jpg" class="imgSlide" alt="...">
+                <img src="../assets/img/bandeDessine.jpg" class="imgSlide" alt="...">
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
 
   <?php include 'template/footer.php'; ?>
 </div>
