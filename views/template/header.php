@@ -36,13 +36,7 @@
             <a class="nav-link" href="./">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Roman</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Manga</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Comic</a>
+            <a class="nav-link" href="../controllers/galerie.php">Notre Galerie</a>
           </li>
         </ul>
         <ul class="navbar-nav">

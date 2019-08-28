@@ -1,0 +1,43 @@
+@import '_variables';
+
+.article {
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      color: $color_orange;
+      font: 700 24px Roboto;
+
+      &:hover {
+        color: $color_dark;
+      }
+
+      div.block {
+        width: 100%;
+        height: auto;
+        background: #e1e1e1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid #ececec;
+
+        &:hover {
+          border: 5px solid $color_dark;
+        }
+
+        i.iconBook {
+          font-size: 100px;
+          color: $color_dark;
+          padding: 25px;
+        }
+      }
+
+
+    }
+  }
+}
