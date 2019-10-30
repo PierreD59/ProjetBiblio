@@ -10,8 +10,41 @@ abstract class Book
         $content,
         $release_date,
         $available,
-        $catagory_id,
-        $image_id;
+        $catagory,
+        $image,
+        $alt;
+
+
+    /**
+     * constructor
+     *
+     * @param array $array
+     */
+    public function __construct(array $array)
+    {
+        $this->hydrate($array);
+    }
+
+    /**
+     * Hydratation
+     *
+     * @param array $donnees
+     */
+    public function hydrate(array $donnees)
+    {
+
+        foreach ($donnees as $key => $value) {
+            // On récupère le nom du setter correspondant à l'attribut.
+            $method = 'set' . ucfirst($key);
+
+            // Si le setter correspondant existe.
+            if (method_exists($this, $method)) {
+                // On appelle le setter.
+                $this->$method($value);
+            }
+        }
+    }
+
 
     /**
      * Set the value of id
@@ -84,45 +117,42 @@ abstract class Book
 
         return $this;
     }
-
     /**
-     * Set the value of catagory_id
+     * Set the value of catagory
      *
      * @return  self
      */
-    public function setCatagory_id($catagory_id)
+    public function setCatagory($catagory)
     {
-        $this->catagory_id = $catagory_id;
+        $this->catagory = $catagory;
+
+        return $this;
+    }
+    /**
+     * Set the value of image
+     *
+     * @return  self
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
 
         return $this;
     }
 
     /**
-     * Set the value of image_id
+     * Set the value of alt
      *
      * @return  self
      */
-    public function setImage_id($image_id)
+    public function setAlt($alt)
     {
-        $this->image_id = $image_id;
+        $this->alt = $alt;
 
         return $this;
     }
 
-    /**
-     * Get the value of catagory_id
-     */
-    public function getCatagory_id()
-    {
-        return $this->catagory_id;
-    }
-    /**
-     * Get the value of image_id
-     */
-    public function getImage_id()
-    {
-        return $this->image_id;
-    }
+
     /**
      * Get the value of available
      */
@@ -165,5 +195,29 @@ abstract class Book
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Get the value of catagory
+     */
+    public function getCatagory()
+    {
+        return $this->catagory;
+    }
+
+    /**
+     * Get the value of image
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Get the value of alt
+     */
+    public function getAlt()
+    {
+        return $this->alt;
     }
 }

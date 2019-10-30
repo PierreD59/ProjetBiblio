@@ -32,9 +32,9 @@ body {
   background: #4E7988; }
 
 main {
-  max-width: 1200px;
   margin: auto;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  max-width: 1200px; }
 
 .breadcrumb {
   background-color: transparent;
