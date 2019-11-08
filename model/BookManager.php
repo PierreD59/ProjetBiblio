@@ -41,15 +41,15 @@ class BookManager
      */
     public function add(Book $book)
     {
-        $query = $this->getDb()->prepare('INSERT INTO book(name, author, content, release_date, available, category, image, alt) VALUES (:name, :author, :content, :release_date, :available, :category, :image, :alt)');
+        $query = $this->getDb()->prepare('INSERT INTO book(name, author, content, category, image, alt) VALUES (:name, :author, :content, :category, :image, :alt)');
         $query->bindValue('name', $book->getName(), PDO::PARAM_STR);
         $query->bindValue('author', $book->getAuthor(), PDO::PARAM_STR);
         $query->bindValue('content', $book->getContent(), PDO::PARAM_STR);
-        $query->bindValue('release_date', $book->getRelease_date(), PDO::PARAM_INT);
-        $query->bindValue('available', $book->getAvailable(), PDO::PARAM_BOOL);
-        $query->bindValue('category', $book->getCatagory(), PDO::PARAM_STR);
+        $query->bindValue('category', $book->getCategory(), PDO::PARAM_STR);
         $query->bindValue('image', $book->getImage(), PDO::PARAM_STR);
         $query->bindValue('alt', $book->getAlt(), PDO::PARAM_STR);
+
+        $query->execute();
     }
 
     /**
@@ -65,7 +65,7 @@ class BookManager
         $query->execute();
         $book = $query->fetch(PDO::FETCH_ASSOC);
 
-        $class = ucfirst($book['type']);
+        $class = ucfirst($book['category']);
         return new $class($book);
     }
 
@@ -76,16 +76,16 @@ class BookManager
      */
     public function getBooks()
     {
-        $query = $this->getDB()->query('SELECT id, name, content, category FROM book');
+        $query = $this->getDB()->query('SELECT id, name, author, content, category FROM book');
         $dataBooks = $query->fetchAll(PDO::FETCH_ASSOC);
         $arrayOfBooks = [];
 
         foreach ($dataBooks as $dataBook) {
-            if ($dataBook['category'] === "Manga") {
+            if ($dataBook['category'] == "Manga") {
                 $arrayOfBooks[] = new Manga($dataBook);
-            } elseif ($dataBook['category'] === "Comic") {
+            } elseif ($dataBook['category'] == "Comic") {
                 $arrayOfBooks[] = new Comic($dataBook);
-            } elseif ($dataBook['category'] === "Roman") {
+            } elseif ($dataBook['category'] == "Roman") {
                 $arrayOfBooks[] = new Roman($dataBook);
             }
         }
@@ -107,14 +107,13 @@ class BookManager
      */
     public function update(Book $book)
     {
-        $query = $this->getDb()->prepare('UPDATE INTO book(name, author, content, release_date, available, category, image, alt) VALUES (:name, :author, :content, :release_date, :available, :category, :image, :alt)');
+        $query = $this->getDb()->prepare('UPDATE INTO book(name, author, content, category, image, alt) VALUES (:name, :author, :content, :available, :category, :image, :alt)');
 
         $query->bindValue('name', $book->getName(), PDO::PARAM_STR);
         $query->bindValue('author', $book->getAuthor(), PDO::PARAM_STR);
         $query->bindValue('content', $book->getContent(), PDO::PARAM_STR);
-        $query->bindValue('release_date', $book->getRelease_date(), PDO::PARAM_INT);
         $query->bindValue('available', $book->getAvailable(), PDO::PARAM_BOOL);
-        $query->bindValue('category', $book->getCatagory(), PDO::PARAM_STR);
+        $query->bindValue('category', $book->getCategory(), PDO::PARAM_STR);
         $query->bindValue('image', $book->getImage(), PDO::PARAM_STR);
         $query->bindValue('alt', $book->getAlt(), PDO::PARAM_STR);
 

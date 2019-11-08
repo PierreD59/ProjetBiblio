@@ -15,7 +15,7 @@ header {
     height: 100%; }
   header .icon {
     font-size: 30px;
-    color: #fff;
+    color: #ececec;
     margin-left: 15px; }
 
 footer {
@@ -33,14 +33,13 @@ body {
 
 main {
   margin: auto;
-  margin-bottom: 100px;
-  max-width: 1200px; }
+  margin-bottom: 100px; }
 
 .breadcrumb {
   background-color: transparent;
   margin-top: 80px; }
   .breadcrumb .breadcrumb-item.active {
-    color: #fff; }
+    color: #ececec; }
   .breadcrumb .breadcrumb-item a {
     color: #ececec; }
 
@@ -56,7 +55,7 @@ main {
     .site-content .project .article {
       width: 100%;
       height: auto;
-      background: #fff;
+      background: #ececec;
       display: flex;
       flex-direction: column;
       padding: 25px;
@@ -96,10 +95,14 @@ main {
           width: 100%;
           font-family: "Didact Gothic", arial; }
       .site-content .project .article .button {
-        width: auto;
+        width: 100px;
         background: #e67e22;
-        color: #fff;
-        margin: auto; }
+        color: #ececec;
+        margin: auto;
+        display: flex;
+        justify-content: center; }
+      .site-content .project .article .button-actu {
+        width: 200px; }
 
 .imgSlide {
   width: 25%; }
@@ -155,5 +158,78 @@ main {
         font-size: 100px;
         color: #002439;
         padding: 25px; }
+
+h1 {
+  color: white;
+  margin: 0;
+  padding: 0 0 45px;
+  text-align: center; }
+
+.site-content .project .article .list-configure {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.box {
+  background: #002439;
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  /* Positioning */
+  position: relative; }
+  .box .input-box {
+    position: relative; }
+    .box .input-box label {
+      color: #ececec;
+      text-transform: uppercase;
+      padding: 10px 0;
+      top: -30px;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+      transition: 0.5s; }
+    .box .input-box label[for="manga"],
+    .box .input-box label[for="comic"],
+    .box .input-box label[for="roman"] {
+      top: 0;
+      text-transform: none; }
+    .box .input-box input {
+      border-style: none;
+      background: transparent;
+      border-bottom: 1px solid #ececec;
+      width: 100%;
+      position: relative;
+      outline: none;
+      padding: 10px 0;
+      color: white;
+      font-size: 18px;
+      margin-bottom: 30px; }
+  .box input[type="radio"] {
+    top: 10px;
+    left: -40px; }
+  .box input[type="submit"] {
+    background: transparent;
+    color: white;
+    border-spacing: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s; }
+    .box input[type="submit"]:hover {
+      background: #4E7988;
+      border: 1px solid #4E7988;
+      transition: 0.3s; }
+
+@media (max-width: 768px) {
+  #buttonAdd,
+  #buttonEdit,
+  #buttonSup {
+    margin-top: 25px; } }
 
 /*# sourceMappingURL=styles.css.map */

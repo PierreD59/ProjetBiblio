@@ -8,9 +8,8 @@ abstract class Book
         $name,
         $author,
         $content,
-        $release_date,
         $available,
-        $catagory,
+        $category,
         $image,
         $alt;
 
@@ -95,18 +94,6 @@ abstract class Book
     }
 
     /**
-     * Set the value of release_date
-     *
-     * @return  self
-     */
-    public function setRelease_date($release_date)
-    {
-        $this->release_date = $release_date;
-
-        return $this;
-    }
-
-    /**
      * Set the value of available
      *
      * @return  self
@@ -118,13 +105,13 @@ abstract class Book
         return $this;
     }
     /**
-     * Set the value of catagory
+     * Set the value of category
      *
      * @return  self
      */
-    public function setCatagory($catagory)
+    public function setCategory($category)
     {
-        $this->catagory = $catagory;
+        $this->category = $category;
 
         return $this;
     }
@@ -160,13 +147,6 @@ abstract class Book
     {
         return $this->available;
     }
-    /**
-     * Get the value of release_date
-     */
-    public function getRelease_date()
-    {
-        return $this->release_date;
-    }
 
     /**
      * Get the value of content
@@ -198,11 +178,11 @@ abstract class Book
     }
 
     /**
-     * Get the value of catagory
+     * Get the value of category
      */
-    public function getCatagory()
+    public function getCategory()
     {
-        return $this->catagory;
+        return $this->category;
     }
 
     /**

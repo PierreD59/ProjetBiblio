@@ -7,7 +7,6 @@ body {
 main {
   margin: auto;
   margin-bottom: 100px;
-  max-width: 1200px;
 }
 
 .breadcrumb {
@@ -90,10 +89,16 @@ main {
       }
 
       .button {
-        width: auto;
+        width: 100px;
         background: #e67e22;
         color: $color_white;
         margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .button-actu {
+        width: 200px;
       }
     }
   }

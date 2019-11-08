@@ -22,3 +22,17 @@ $('.counter').each(function () {
 
     });
 });
+
+// Click configuration button add edit and delete
+
+let click = document.getElementById("buttonAdd");
+
+function clickOpen() {
+  click.getElementById("box").style.display = block;
+
+}
+
+function clickClose() {
+  click.getElementById("box").style.display = none;
+
+}
