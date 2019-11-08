@@ -11,8 +11,4 @@ function chargerClasse($classname)
 }
 spl_autoload_register('chargerClasse');
 
-$db = Database::DB();
-$manager = new BookManager($db);
-$books = $manager->getBooks();
-
-include "../views/indexVue.php";
+include "../views/galerieVue.php";

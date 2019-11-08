@@ -5,9 +5,21 @@ body {
 }
 
 main {
-  max-width: 1200px;
   margin: auto;
   margin-bottom: 100px;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  margin-top: 80px;
+
+  .breadcrumb-item.active {
+    color: $color_white;
+  }
+
+  .breadcrumb-item a {
+    color: #ececec;
+  }
 }
 
 .site-content {
@@ -22,23 +34,33 @@ main {
     align-items: center;
     justify-content: center;
 
-    .lasted-book,
-    .actuality,
-    .crush {
+    .article {
       width: 100%;
       height: auto;
       background: $color_white;
       display: flex;
       flex-direction: column;
       padding: 25px;
-      margin-top: 150px;
+      margin-bottom: 50px;
 
       .news {
         text-align: center;
         color: #e67e22;
         margin: 5px 0 15px;
-        font-family: $roboto;
+        font: 700 32px $roboto;
+        text-transform: uppercase;
+        border-bottom: 1px solid $color_dark;
 
+        &::after {
+          content: "";
+          width: 100px;
+          height: 10px;
+          background: $color_orange;
+          display: block;
+          margin: 25px auto 0;
+          position: relative;
+          top: 5px;
+        }
       }
 
       .list-book,
@@ -67,10 +89,16 @@ main {
       }
 
       .button {
-        width: auto;
+        width: 100px;
         background: #e67e22;
         color: $color_white;
         margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .button-actu {
+        width: 200px;
       }
     }
   }
@@ -78,4 +106,41 @@ main {
 
 .imgSlide {
   width: 25%;
+}
+
+#blockStat {
+
+  margin: 25px 0;
+  width: 100%;
+  height: auto;
+  background: $color_dark;
+
+  .blockStat {
+    display: inline-block;
+    height: 200px;
+    width: 100%;
+
+  }
+
+  .iconStat {
+    padding: 25px;
+
+  }
+
+  .iconStat,
+  .textIconstat,
+  .counter {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .counter {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    font-weight: 700;
+  }
 }

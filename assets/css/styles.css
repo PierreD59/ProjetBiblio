@@ -15,7 +15,7 @@ header {
     height: 100%; }
   header .icon {
     font-size: 30px;
-    color: #E4EFF0;
+    color: #ececec;
     margin-left: 15px; }
 
 footer {
@@ -32,9 +32,16 @@ body {
   background: #4E7988; }
 
 main {
-  max-width: 1200px;
   margin: auto;
   margin-bottom: 100px; }
+
+.breadcrumb {
+  background-color: transparent;
+  margin-top: 80px; }
+  .breadcrumb .breadcrumb-item.active {
+    color: #ececec; }
+  .breadcrumb .breadcrumb-item a {
+    color: #ececec; }
 
 .site-content {
   width: 100%;
@@ -45,66 +52,184 @@ main {
     margin: auto;
     align-items: center;
     justify-content: center; }
-    .site-content .project .lasted-book,
-    .site-content .project .actuality,
-    .site-content .project .crush {
+    .site-content .project .article {
       width: 100%;
       height: auto;
-      background: #E4EFF0;
+      background: #ececec;
       display: flex;
       flex-direction: column;
       padding: 25px;
-      margin-top: 150px; }
-      .site-content .project .lasted-book .news,
-      .site-content .project .actuality .news,
-      .site-content .project .crush .news {
+      margin-bottom: 50px; }
+      .site-content .project .article .news {
         text-align: center;
         color: #e67e22;
         margin: 5px 0 15px;
-        font-family: "Roboto", sans-serif; }
-      .site-content .project .lasted-book .list-book,
-      .site-content .project .lasted-book .list-actuality,
-      .site-content .project .actuality .list-book,
-      .site-content .project .actuality .list-actuality,
-      .site-content .project .crush .list-book,
-      .site-content .project .crush .list-actuality {
+        font: 700 32px "Roboto", sans-serif;
+        text-transform: uppercase;
+        border-bottom: 1px solid #002439; }
+        .site-content .project .article .news::after {
+          content: "";
+          width: 100px;
+          height: 10px;
+          background: #e67e22;
+          display: block;
+          margin: 25px auto 0;
+          position: relative;
+          top: 5px; }
+      .site-content .project .article .list-book,
+      .site-content .project .article .list-actuality {
         width: 100%;
         display: flex;
         justify-content: center; }
-        .site-content .project .lasted-book .list-book .link,
-        .site-content .project .lasted-book .list-actuality .link,
-        .site-content .project .actuality .list-book .link,
-        .site-content .project .actuality .list-actuality .link,
-        .site-content .project .crush .list-book .link,
-        .site-content .project .crush .list-actuality .link {
+        .site-content .project .article .list-book .link,
+        .site-content .project .article .list-actuality .link {
           color: #002439;
           text-decoration: none; }
-        .site-content .project .lasted-book .list-book .card .card-title,
-        .site-content .project .lasted-book .list-actuality .card .card-title,
-        .site-content .project .actuality .list-book .card .card-title,
-        .site-content .project .actuality .list-actuality .card .card-title,
-        .site-content .project .crush .list-book .card .card-title,
-        .site-content .project .crush .list-actuality .card .card-title {
+        .site-content .project .article .list-book .card .card-title,
+        .site-content .project .article .list-actuality .card .card-title {
           font-family: "Roboto", sans-serif; }
-        .site-content .project .lasted-book .list-book .card .card-text,
-        .site-content .project .lasted-book .list-actuality .card .card-text,
-        .site-content .project .actuality .list-book .card .card-text,
-        .site-content .project .actuality .list-actuality .card .card-text,
-        .site-content .project .crush .list-book .card .card-text,
-        .site-content .project .crush .list-actuality .card .card-text {
+        .site-content .project .article .list-book .card .card-text,
+        .site-content .project .article .list-actuality .card .card-text {
           border-top: 1px solid #e67e22;
           padding-top: 10px;
           width: 100%;
           font-family: "Didact Gothic", arial; }
-      .site-content .project .lasted-book .button,
-      .site-content .project .actuality .button,
-      .site-content .project .crush .button {
-        width: auto;
+      .site-content .project .article .button {
+        width: 100px;
         background: #e67e22;
-        color: #E4EFF0;
-        margin: auto; }
+        color: #ececec;
+        margin: auto;
+        display: flex;
+        justify-content: center; }
+      .site-content .project .article .button-actu {
+        width: 200px; }
 
 .imgSlide {
   width: 25%; }
+
+#blockStat {
+  margin: 25px 0;
+  width: 100%;
+  height: auto;
+  background: #002439; }
+  #blockStat .blockStat {
+    display: inline-block;
+    height: 200px;
+    width: 100%; }
+  #blockStat .iconStat {
+    padding: 25px; }
+  #blockStat .iconStat,
+  #blockStat .textIconstat,
+  #blockStat .counter {
+    color: white;
+    font-size: 32px;
+    text-align: center; }
+  #blockStat .counter {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    font-weight: 700; }
+
+.article li {
+  list-style: none; }
+  .article li a {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    color: #e67e22;
+    font: 700 24px Roboto; }
+    .article li a:hover {
+      color: #002439; }
+    .article li a div.block {
+      width: 100%;
+      height: auto;
+      background: #e1e1e1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 5px solid #ececec; }
+      .article li a div.block:hover {
+        border: 5px solid #002439; }
+      .article li a div.block i.iconBook {
+        font-size: 100px;
+        color: #002439;
+        padding: 25px; }
+
+h1 {
+  color: white;
+  margin: 0;
+  padding: 0 0 45px;
+  text-align: center; }
+
+.site-content .project .article .list-configure {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.box {
+  background: #002439;
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  /* Positioning */
+  position: relative; }
+  .box .input-box {
+    position: relative; }
+    .box .input-box label {
+      color: #ececec;
+      text-transform: uppercase;
+      padding: 10px 0;
+      top: -30px;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+      transition: 0.5s; }
+    .box .input-box label[for="manga"],
+    .box .input-box label[for="comic"],
+    .box .input-box label[for="roman"] {
+      top: 0;
+      text-transform: none; }
+    .box .input-box input {
+      border-style: none;
+      background: transparent;
+      border-bottom: 1px solid #ececec;
+      width: 100%;
+      position: relative;
+      outline: none;
+      padding: 10px 0;
+      color: white;
+      font-size: 18px;
+      margin-bottom: 30px; }
+  .box input[type="radio"] {
+    top: 10px;
+    left: -40px; }
+  .box input[type="submit"] {
+    background: transparent;
+    color: white;
+    border-spacing: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s; }
+    .box input[type="submit"]:hover {
+      background: #4E7988;
+      border: 1px solid #4E7988;
+      transition: 0.3s; }
+
+@media (max-width: 768px) {
+  #buttonAdd,
+  #buttonEdit,
+  #buttonSup {
+    margin-top: 25px; } }
 
 /*# sourceMappingURL=styles.css.map */
