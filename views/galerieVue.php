@@ -23,8 +23,9 @@
             </a>
         </li>
         <li class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-            <a href="book.php">
-                <div class="block p-0 m-3"><i class="fas fa-book iconBook"></i></div>
+            <a href="book.php?category=<?= $categoryBook == "Romans" ?>">
+                <div class=" block p-0 m-3"><i class="fas fa-book iconBook"></i>
+                </div>
                 <span class="text-block">Romans</sp>
             </a>
         </li>

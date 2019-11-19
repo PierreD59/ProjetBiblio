@@ -63,10 +63,10 @@ class BookManager
         $query = $this->getDB()->prepare('SELECT * FROM book WHERE id = :id');
         $query->bindValue('id', $info, PDO::PARAM_INT);
         $query->execute();
-        $book = $query->fetch(PDO::FETCH_ASSOC);
+        $detailBook = $query->fetch(PDO::FETCH_ASSOC);
 
-        $class = ucfirst($book['category']);
-        return new $class($book);
+        $class = ucfirst($detailBook['category']);
+        return new $class($detailBook);
     }
 
     /**
@@ -76,7 +76,7 @@ class BookManager
      */
     public function getBooks()
     {
-        $query = $this->getDB()->query('SELECT id, name, author, content, category FROM book');
+        $query = $this->getDB()->query('SELECT id, name, author, content, category FROM book LIMIT 6');
         $dataBooks = $query->fetchAll(PDO::FETCH_ASSOC);
         $arrayOfBooks = [];
 

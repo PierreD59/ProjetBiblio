@@ -9,7 +9,7 @@
     </ol>
 </nav>
 
-<div class="container article">
+<section class="container article">
     <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 row m-auto p-0 d-flex align-items-center">
         <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -40,13 +40,12 @@
             </div>
         </div>
         <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h2 class="news">Nom du manga</h2>
-            <p>Auteur : </p>
-            <p>Categorie : </p>
-            <p>Disponible : </p>
+            <h1 class="news"><?= $book->getName(); ?></h1>
+            <p>Auteur : <?= $book->getAuthor(); ?></p>
+            <p>Categorie : <?= $book->getCategory(); ?></p>
+            <p>Disponible : <?= $book->getAvailable(); ?></p>
             <p class="articleBook">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, rem. Molestias doloremque tenetur voluptate rem,
-                corrupti suscipit pariatur, beatae dolores molestiae sint laboriosam ipsa impedit, illum et facere consequatur quaerat.
+                <?= $book->getContent(); ?>
             </p>
             <div class="col-6 col-xs-6 col-sm-6 col-md-12 col-lg-12 row m-auto p-0 d-flex justify-content-center">
                 <a class="col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 btn button text-white m-3 pr-0 pl-0">Acheter</a>
@@ -54,6 +53,6 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include 'template/footer.php'; ?>

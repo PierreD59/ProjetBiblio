@@ -14,7 +14,7 @@
       <?php
       foreach ($books as $book) { ?>
         <div class="m-3 p-0 col-xs-12 col-sm-12 col-md-4 col-lg-3">
-          <a class="link card" href="../controllers/detailBook.php"><img src="../assets/img/livre.jpg" class="card-img-top" alt="...">
+          <a class="link card" href="detailBook.php?id=<?= $book->getId(); ?>&type=<?= $book->getCategory(); ?>"><img src="../assets/img/livre.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h2 class="card-title"><?= $book->getName() ?></h2>
               <p class="card-author"><?= $book->getAuthor() ?></p>
