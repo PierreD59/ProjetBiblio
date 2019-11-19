@@ -28,11 +28,11 @@ $('.counter').each(function () {
 let click = document.getElementById("buttonAdd");
 
 function clickOpen() {
-  click.getElementById("box").style.display = block;
+  click.getElementById("form").style.display = block;
 
 }
 
 function clickClose() {
-  click.getElementById("box").style.display = none;
+  click.getElementById("form").style.display = none;
 
 }

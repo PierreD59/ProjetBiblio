@@ -56,14 +56,19 @@
                     <label for="alt">Description de l'image</label>
                     <input type="text" placeholder="azertyuiop" name="alt" />
                 </div>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Ajouter un livre" />
             </form>
         </div>
 
+
         <div class="boxButton">
+            <!-- Button add -->
             <div class="btn btn-primary" id="buttonAdd">Ajouter</div>
-            <div class="btn btn-primary" id="buttonEdit">Editer</div>
-            <div class="btn btn-primary" id="buttonSup">Supprimer</div>
+            <!-- Button edit modal -->
+            <a type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#exampleModalCenter">Editer</a>
+
+            <!-- Button delete -->
+            <a class="btn btn-danger text-light" href="index.php?remove=<?= $book->getId(); ?>&category=<?= $book->getCategory(); ?>">Delete</a>
         </div>
 
     </div>
