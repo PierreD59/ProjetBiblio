@@ -106,6 +106,9 @@ main {
           color: white; }
           .site-content .project .article .buttonList .button:hover {
             color: #ececec; }
+        .site-content .project .article .buttonList li form .buttonDelete {
+          width: 100% !important;
+          margin: 1rem 0 !important; }
 
 .button {
   width: auto;

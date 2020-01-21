@@ -106,6 +106,15 @@ main {
             color: $color_grey;
           }
         }
+
+        li {
+          form {
+            .buttonDelete {
+              width: 100% !important;
+              margin: 1rem 0 !important;
+            }
+          }
+        }
       }
     }
   }

@@ -48,9 +48,14 @@
                 <?= $book->getContent(); ?>
             </p>
             <ul class="row m-auto p-0 buttonList">
-                <li class="col-12 col-md-6 col-lg-4"> <a class="btn button text-button my-3">Acheter</a></li>
+                <li class="col-12 col-md-6 col-lg-4"> <a class="btn button my-3">Acheter</a></li>
                 <li class="col-12 col-md-6 col-lg-4"> <a href="configure.php?id=<?= $book->getId() ?>" class="btn button my-3">Editer</a></li>
-                <li class="col-12 col-md-6 col-lg-4"> <a class="btn button text-button my-3">Supprimer</a></li>
+                <li class="col-12 col-md-6 col-lg-4">
+                    <form action="detailBook.php" method="post">
+                        <input type="hidden" name="id" value="<?= $book->getId() ?>" />
+                        <input class="btn button buttonDelete my-3" type="submit" name="delete" value="Supprimer" />
+                    </form>
+                </li>
             </ul>
         </div>
     </div>
