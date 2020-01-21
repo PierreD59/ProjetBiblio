@@ -47,10 +47,11 @@
             <p class="articleBook">
                 <?= $book->getContent(); ?>
             </p>
-            <div class="col-6 col-xs-6 col-sm-6 col-md-12 col-lg-12 row m-auto p-0 d-flex justify-content-center">
-                <a class="col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 btn button text-white m-3 pr-0 pl-0">Acheter</a>
-                <a class="col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 btn button text-white m-3 pr-0 pl-0">Lire un extrait</a>
-            </div>
+            <ul class="row m-auto p-0 buttonList">
+                <li class="col-12 col-md-6 col-lg-4"> <a class="btn button text-button my-3">Acheter</a></li>
+                <li class="col-12 col-md-6 col-lg-4"> <a href="configure.php?id=<?= $book->getId() ?>" class="btn button my-3">Editer</a></li>
+                <li class="col-12 col-md-6 col-lg-4"> <a class="btn button text-button my-3">Supprimer</a></li>
+            </ul>
         </div>
     </div>
 </section>

@@ -13,138 +13,78 @@ spl_autoload_register('chargerClasse');
 $db = Database::DB();
 $manager = new BookManager($db);
 
-if (isset($_POST['name']) && !empty($_POST['name'])) {
-    $name = htmlspecialchars($_POST['name']);
-    if (isset($_POST['author']) && !empty($_POST['author'])) {
-        $author = htmlspecialchars($_POST['author']);
-        if (isset($_POST['content']) && !empty($_POST['content'])) {
-            $content = htmlspecialchars($_POST['content']);
-            if (isset($_POST['image']) && !empty($_POST['image'])) {
-                $image = htmlspecialchars($_POST['image']);
-                if (isset($_POST['alt']) && !empty($_POST['alt'])) {
-                    $alt = htmlspecialchars($_POST['alt']);
-                    if (isset($_POST['category'])) {
-                        $category = htmlspecialchars($_POST['category']);
-                    }
-                    if ($_POST['category'] == "Manga") {
-                        $manga = new Manga([
-                            "name" => $name,
-                            "author" => $author,
-                            "content" => $content,
-                            "category" => "Manga",
-                            "available" => "1",
-                            "image" => $image,
-                            "alt" => $alt,
-                        ]);
-                        var_dump($manga);
-                        $manager->add($manga);
-                        $mangaAlert = "Manga ajouté !";
-                    } elseif ($_POST['category'] == "Roman") {
-                        $roman = new Roman([
-                            "name" => $name,
-                            "author" => $author,
-                            "content" => $content,
-                            "category" => "Roman",
-                            "available" => "1",
-                            "image" => $image,
-                            "alt" => $alt,
-                        ]);
-                        $manager->add($roman);
-                        $romanAlert = "Roman ajouté !";
-                    } elseif ($_POST['category'] == "Comic") {
-                        $comic = new Comic([
-                            "name" => $name,
-                            "author" => $author,
-                            "content" => $content,
-                            "category" => "Comic",
-                            "available" => "1",
-                            "image" => $image,
-                            "alt" => $alt,
-                        ]);
-                        $manager->add($comic);
-                        $comicAlert = "Comic ajouté !";
+if (isset($_POST['submit'])) {
+    if (isset($_GET['id'])) {
+        if (isset($_POST['name']) && !empty($_POST['name'])) {
+            $name = htmlspecialchars($_POST['name']);
+            if (isset($_POST['author']) && !empty($_POST['author'])) {
+                $author = htmlspecialchars($_POST['author']);
+                if (isset($_POST['content']) && !empty($_POST['content'])) {
+                    $content = htmlspecialchars($_POST['content']);
+                    if (isset($_POST['image']) && !empty($_POST['image'])) {
+                        $image = htmlspecialchars($_POST['image']);
+                        if (isset($_POST['alt']) && !empty($_POST['alt'])) {
+                            $alt = htmlspecialchars($_POST['alt']);
+                            if (isset($_POST['category'])) {
+                                $category = htmlspecialchars($_POST['category']);
+                            }
+                            if ($_POST['category'] == "Manga") {
+                                $newManga = new Manga([
+                                    "id" => $_GET['id'],
+                                    "name" => $name,
+                                    "author" => $author,
+                                    "content" => $content,
+                                    "category" => "Manga",
+                                    "image" => $image,
+                                    "alt" => $alt,
+                                ]);
+                                $manager->update($newManga);
+                                header("Location: index.php");
+                            } elseif ($_POST['category'] == "Roman") {
+                                $newRoman = new Roman([
+                                    "id" => $_GET['id'],
+                                    "name" => $name,
+                                    "author" => $author,
+                                    "content" => $content,
+                                    "category" => "Roman",
+                                    "image" => $image,
+                                    "alt" => $alt,
+                                ]);
+                                $manager->update($newRoman);
+                                header("Location: index.php");
+                            } elseif ($_POST['category'] == "Comic") {
+                                $newComic = new Comic([
+                                    "id" => $_GET['id'],
+                                    "name" => $name,
+                                    "author" => $author,
+                                    "content" => $content,
+                                    "category" => "Comic",
+                                    "image" => $image,
+                                    "alt" => $alt,
+                                ]);
+                                $manager->update($newComic);
+                                header("Location: index.php");
+                            } else {
+                                echo "error category";
+                            }
+                        } else {
+                            echo "error alt";
+                        }
                     } else {
-                        echo "error category";
+                        echo "error image";
                     }
                 } else {
-                    echo "error alt";
+                    echo "error content";
                 }
             } else {
-                echo "error image";
+                echo "error author";
             }
         } else {
-            echo "error content";
+            echo "error name";
         }
-    } else {
-        echo "error author";
     }
 }
 
-if (isset($_POST['editName']) && !empty($_POST['editName'])) {
-    $name = htmlspecialchars($_POST['name']);
-    if (isset($_POST['editAuthor']) && !empty($_POST['editAuthor'])) {
-        $author = htmlspecialchars($_POST['author']);
-        if (isset($_POST['editContent']) && !empty($_POST['editContent'])) {
-            $content = htmlspecialchars($_POST['content']);
-            if (isset($_POST['editImage']) && !empty($_POST['editImage'])) {
-                $image = htmlspecialchars($_POST['image']);
-                if (isset($_POST['editAlt']) && !empty($_POST['editAlt'])) {
-                    $alt = htmlspecialchars($_POST['alt']);
-                    if (isset($_POST['editCategory'])) {
-                        $category = htmlspecialchars($_POST['editCategory']);
-                    }
-                    if ($_POST['editCategory'] == "Manga") {
-                        $manga = new Manga([
-                            "name" => $name,
-                            "author" => $author,
-                            "content" => $content,
-                            "category" => "Manga",
-                            "available" => "1",
-                            "image" => $image,
-                            "alt" => $alt,
-                        ]);
-                        var_dump($manga);
-                        $manager->edit($manga);
-                        $mangaAlert = "Manga ajouté !";
-                    } elseif ($_POST['editCategory'] == "Roman") {
-                        $roman = new Roman([
-                            "name" => $name,
-                            "author" => $author,
-                            "content" => $content,
-                            "category" => "Roman",
-                            "available" => "1",
-                            "image" => $image,
-                            "alt" => $alt,
-                        ]);
-                        $manager->edit($roman);
-                        $romanAlert = "Roman ajouté !";
-                    } elseif ($_POST['editCategory'] == "Comic") {
-                        $comic = new Comic([
-                            "name" => $name,
-                            "author" => $author,
-                            "content" => $content,
-                            "category" => "Comic",
-                            "available" => "1",
-                            "image" => $image,
-                            "alt" => $alt,
-                        ]);
-                        $manager->edit($comic);
-                        $comicAlert = "Comic ajouté !";
-                    } else {
-                        echo "error category";
-                    }
-                } else {
-                    echo "error alt";
-                }
-            } else {
-                echo "error image";
-            }
-        } else {
-            echo "error content";
-        }
-    } else {
-        echo "error author";
-    }
-}
+
 
 include "../views/configureVue.php";

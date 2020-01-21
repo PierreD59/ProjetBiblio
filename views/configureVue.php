@@ -8,71 +8,52 @@
 </nav>
 <div class="container article">
 
-    <h2 class="news">Panneau de Configuration</h2>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-configure row m-0 p-0">
+    <h1 class="news">Panneau de Configuration</h1>
 
-        <div id="form" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box">
-            <h1>Ajouter un Livre</h1>
-            <form method="post" action="configure.php">
-                <input type="hidden" name="id" />
-                <div class="input-box">
+    <div class="col-12 col-md-12 d-flex justify-content-center">
+        <div class="col-12 col-md-6">
+            <form method="post" action="configure.php?id=<?= $_GET['id'] ?>">
+                <div class="form-group">
                     <label for="name">Nom du Livre</label>
-                    <input type="text" name="name" placeholder="azertyuiop" />
+                    <input class="form-control" type="text" name="name" placeholder="azertyuiop" />
                 </div>
-                <div class="input-box">
+                <div class="form-group">
                     <label for="author">Son Auteur</label>
-                    <input type="text" name="author" placeholder="John Doe" />
+                    <input class="form-control" type="text" name="author" placeholder="John Doe" />
                 </div>
-                <div class="input-box">
+                <div class="form-group">
                     <label for="content">Son Résumé</label>
-                    <input type="text" name="content" placeholder="Un résumé" />
+                    <input class="form-control" type="text" name="content" placeholder="Un résumé" />
                 </div>
 
-                <div class="input-box">
+                <div class="form-group">
                     <div class="form-check">
-                        <label class="form-check-label" for="manga">
-                            Manga
-                        </label>
                         <input class="form-check-input" type="radio" name="category" id="Manga" value="Manga" checked>
+                        <label class="form-check-label" for="manga">Manga</label>
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label" for="roman">
-                            Roman
-                        </label>
                         <input class="form-check-input" type="radio" name="category" id="Roman" value="Roman">
+                        <label class="form-check-label" for="roman">Roman</label>
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label" for="comic">
-                            Comic
-                        </label>
                         <input class="form-check-input" type="radio" name="category" id="Comic" value="Comic">
+                        <label class="form-check-label" for="comic">Comic</label>
                     </div>
                 </div>
-                <div class="input-box mt-5">
+                <div class="form-group">
                     <label for="image">Image</label>
-                    <input type="text" placeholder="../assets/img/livre.jpg" name="image" />
+                    <input class="form-control" type="text" placeholder="../assets/img/livre.jpg" name="image" />
                 </div>
-                <div class="input-box">
+                <div class="form-group">
                     <label for="alt">Description de l'image</label>
-                    <input type="text" placeholder="azertyuiop" name="alt" />
+                    <input class="form-control" type="text" placeholder="azertyuiop" name="alt" />
                 </div>
-                <input type="submit" value="Ajouter un livre" />
+                <div class="form-group">
+                    <input class="btn button" name="submit" type="submit" value="Editer un livre" />
+                </div>
             </form>
         </div>
-
-
-        <div class="boxButton">
-            <!-- Button add -->
-            <div class="btn btn-primary" id="buttonAdd">Ajouter</div>
-            <!-- Button edit modal -->
-            <a type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#exampleModalCenter">Editer</a>
-
-            <!-- Button delete -->
-            <a class="btn btn-danger text-light" href="index.php?remove=<?= $book->getId(); ?>&category=<?= $book->getCategory(); ?>">Delete</a>
-        </div>
-
     </div>
 </div>
-
 
 <?php include 'template/footer.php'; ?>

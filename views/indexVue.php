@@ -14,7 +14,7 @@
       <?php
       foreach ($books as $book) { ?>
         <div class="m-3 p-0 col-xs-12 col-sm-12 col-md-4 col-lg-3">
-          <a class="link card" href="detailBook.php?id=<?= $book->getId(); ?>&type=<?= $book->getCategory(); ?>"><img src="../assets/img/livre.jpg" class="card-img-top" alt="...">
+          <a class="link card" href="detailBook.php?id=<?= $book->getId() ?>&category=<?= $book->getCategory() ?>"><img src="../assets/img/livre.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h2 class="card-title"><?= $book->getName() ?></h2>
               <p class="card-author"><?= $book->getAuthor() ?></p>
@@ -25,10 +25,71 @@
       <?php } ?>
     </div>
 
-    <a href="../controllers/galerie.php" class="btn button">Voir plus</a>
+    <ul class="row m-0 p-0 buttonList">
+      <li class="col-12 col-md-4"> <a href="../controllers/galerie.php" class="btn button my-3">Voir plus</a></li>
+      <li class="col-12 col-md-4"> <a type="button" class="btn button my-3" data-toggle="modal" data-target="#exampleModalCenter">Ajouter un livre</a></li>
+    </ul>
+
   </div>
 </div>
-<div class="container article">
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalCenterTitle">Ajouter un livre</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-bodyBlock">
+        <form method="post" action="index.php">
+          <div class="form-group">
+            <label for="name">Nom du Livre</label>
+            <input class="form-control" type="text" name="name" placeholder="azertyuiop" />
+          </div>
+          <div class="form-group">
+            <label for="author">Son Auteur</label>
+            <input class="form-control" type="text" name="author" placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label for="content">Son Résumé</label>
+            <input class="form-control" type="text" name="content" placeholder="Un résumé" />
+          </div>
+
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="category" id="Manga" value="Manga" checked>
+              <label class="form-check-label" for="manga"> Manga </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="category" id="Roman" value="Roman">
+              <label class="form-check-label" for="roman">Roman</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="category" id="Comic" value="Comic">
+              <label class="form-check-label" for="comic">Comic</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="image">Image</label>
+            <input class="form-control" type="text" placeholder="../assets/img/livre.jpg" name="image" />
+          </div>
+          <div class="form-group">
+            <label for="alt">Description de l'image</label>
+            <input class="form-control" type="text" placeholder="azertyuiop" name="alt" />
+          </div>
+          <div class="modal-footer">
+            <input class="btn button" type="submit" value="Ajouter un livre" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container article">
   <h2 class="news">Nos actualités</h2>
   <div class="list-actuality row m-0 p-0">
 
@@ -51,7 +112,7 @@
     </div>
   </div>
   <a href="actualite.php" class="btn button button-actu">Voir toutes les actualités</a>
-</div>
+</div> -->
 
 <div id="blockStat">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row p-0 m-0">
@@ -87,36 +148,5 @@
     </div>
   </div>
 </div>
-
-
-<!-- <h1 class="news">Les Coups de coeur du mois</h1>
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <img src="../assets/img/comic.jpg" class="imgSlide" alt="...">
-          <img src="../assets/img/manga.jpg" class="imgSlide" alt="...">
-          <img src="../assets/img/livreCouv.jpg" class="imgSlide" alt="...">
-          <img src="../assets/img/bandeDessine.jpg" class="imgSlide" alt="...">
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <img src="../assets/img/comic.jpg" class="imgSlide" alt="...">
-          <img src="../assets/img/manga.jpg" class="imgSlide" alt="...">
-          <img src="../assets/img/livreCouv.jpg" class="imgSlide" alt="...">
-          <img src="../assets/img/bandeDessine.jpg" class="imgSlide" alt="...">
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div> -->
 
 <?php include 'template/footer.php'; ?>

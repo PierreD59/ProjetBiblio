@@ -7,15 +7,13 @@ header {
   position: fixed;
   z-index: 50;
   width: 100%;
-  height: 10vh;
-  max-height: 10vh;
   font-family: "Roboto", sans-serif !important; }
   header .navbar {
     width: 100%;
     height: 100%; }
   header .icon {
     font-size: 30px;
-    color: #ececec;
+    color: white;
     margin-left: 15px; }
 
 footer {
@@ -39,7 +37,7 @@ main {
   background-color: transparent;
   margin-top: 80px; }
   .breadcrumb .breadcrumb-item.active {
-    color: #ececec; }
+    color: white; }
   .breadcrumb .breadcrumb-item a {
     color: #ececec; }
 
@@ -55,11 +53,11 @@ main {
     .site-content .project .article {
       width: 100%;
       height: auto;
-      background: #ececec;
+      background: white;
       display: flex;
       flex-direction: column;
       padding: 25px;
-      margin-bottom: 50px; }
+      margin-bottom: 25px; }
       .site-content .project .article .news {
         text-align: center;
         color: #e67e22;
@@ -94,15 +92,30 @@ main {
           padding-top: 10px;
           width: 100%;
           font-family: "Didact Gothic", arial; }
-      .site-content .project .article .button {
-        width: 100px;
-        background: #e67e22;
-        color: #ececec;
-        margin: auto;
+      .site-content .project .article .buttonList {
         display: flex;
         justify-content: center; }
-      .site-content .project .article .button-actu {
-        width: 200px; }
+        .site-content .project .article .buttonList .button {
+          width: auto;
+          background: #e67e22;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+          font: 700 14px "Roboto", sans-serif;
+          color: white; }
+          .site-content .project .article .buttonList .button:hover {
+            color: #ececec; }
+
+.button {
+  width: auto;
+  background: #e67e22;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font: 700 14px "Roboto", sans-serif;
+  color: white; }
 
 .imgSlide {
   width: 25%; }
@@ -134,7 +147,7 @@ main {
 
 .article li {
   list-style: none; }
-  .article li a {
+  .article li .listGalery {
     text-decoration: none;
     width: 100%;
     display: flex;
@@ -142,9 +155,9 @@ main {
     flex-flow: row wrap;
     color: #e67e22;
     font: 700 24px Roboto; }
-    .article li a:hover {
+    .article li .listGalery:hover {
       color: #002439; }
-    .article li a div.block {
+    .article li .listGalery div.block {
       width: 100%;
       height: auto;
       background: #e1e1e1;
@@ -152,9 +165,9 @@ main {
       justify-content: center;
       align-items: center;
       border: 5px solid #ececec; }
-      .article li a div.block:hover {
+      .article li .listGalery div.block:hover {
         border: 5px solid #002439; }
-      .article li a div.block i.iconBook {
+      .article li .listGalery div.block i.iconBook {
         font-size: 100px;
         color: #002439;
         padding: 25px; }
@@ -168,12 +181,10 @@ h1 {
 .site-content .project .article .list-configure {
   width: 100%;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-between; }
 
 .box {
   background: #002439;
-  width: 400px;
-  height: auto;
   border-radius: 5px;
   padding: 40px;
   box-sizing: border-box;
@@ -182,49 +193,8 @@ h1 {
   position: relative; }
   .box .input-box {
     position: relative; }
-    .box .input-box label {
-      color: #ececec;
-      text-transform: uppercase;
-      padding: 10px 0;
-      top: -30px;
-      left: 0;
-      position: absolute;
-      pointer-events: none;
-      transition: 0.5s; }
-    .box .input-box label[for="manga"],
-    .box .input-box label[for="comic"],
-    .box .input-box label[for="roman"] {
-      top: 0;
-      text-transform: none; }
-    .box .input-box input {
-      border-style: none;
-      background: transparent;
-      border-bottom: 1px solid #ececec;
-      width: 100%;
-      position: relative;
-      outline: none;
-      padding: 10px 0;
-      color: white;
-      font-size: 18px;
-      margin-bottom: 30px; }
-  .box input[type="radio"] {
-    top: 10px;
-    left: -40px; }
-  .box input[type="submit"] {
-    background: transparent;
-    color: white;
-    border-spacing: none;
-    border: 1px solid white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s; }
-    .box input[type="submit"]:hover {
-      background: #4E7988;
-      border: 1px solid #4E7988;
-      transition: 0.3s; }
+  .box .modal-bodyBlock {
+    padding: 25px; }
 
 @media (max-width: 768px) {
   #buttonAdd,

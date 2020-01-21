@@ -76,7 +76,7 @@ class BookManager
      */
     public function getBooks()
     {
-        $query = $this->getDB()->query('SELECT id, name, author, content, category FROM book LIMIT 6');
+        $query = $this->getDB()->query('SELECT id, name, author, content, category FROM book LIMIT 3');
         $dataBooks = $query->fetchAll(PDO::FETCH_ASSOC);
         $arrayOfBooks = [];
 
@@ -107,12 +107,12 @@ class BookManager
      */
     public function update(Book $book)
     {
-        $query = $this->getDb()->prepare('UPDATE INTO book(name, author, content, category, image, alt) VALUES (:name, :author, :content, :available, :category, :image, :alt)');
+        $query = $this->getDb()->prepare('UPDATE book SET name = :name, author = :author, content = :content, category = :category, image = :image, alt = :alt WHERE id = :id ');
 
+        $query->bindValue('id', $book->getId(), PDO::PARAM_INT);
         $query->bindValue('name', $book->getName(), PDO::PARAM_STR);
         $query->bindValue('author', $book->getAuthor(), PDO::PARAM_STR);
         $query->bindValue('content', $book->getContent(), PDO::PARAM_STR);
-        $query->bindValue('available', $book->getAvailable(), PDO::PARAM_BOOL);
         $query->bindValue('category', $book->getCategory(), PDO::PARAM_STR);
         $query->bindValue('image', $book->getImage(), PDO::PARAM_STR);
         $query->bindValue('alt', $book->getAlt(), PDO::PARAM_STR);
