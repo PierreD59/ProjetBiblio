@@ -22,8 +22,6 @@ h1 {
 
 .box {
   background: $color_dark;
-  width: 400px;
-  height: auto;
   border-radius: 5px;
   padding: 40px;
   box-sizing: border-box;
@@ -35,63 +33,67 @@ h1 {
   .input-box {
     position: relative;
 
-    label {
-      color: $color_white;
-      text-transform: uppercase;
-      padding: 10px 0;
-      top: -30px;
-      left: 0;
-      position: absolute;
-      pointer-events: none;
-      transition: 0.5s;
+    //   label {
+    //     color: $color_white;
+    //     text-transform: uppercase;
+    //     padding: 10px 0;
+    //     top: -30px;
+    //     left: 0;
+    //     position: absolute;
+    //     pointer-events: none;
+    //     transition: 0.5s;
 
-    }
+    //   }
 
-    label[for="manga"],
-    label[for="comic"],
-    label[for="roman"] {
-      top: 0;
-      text-transform: none;
-    }
+    //   label[for="manga"],
+    //   label[for="comic"],
+    //   label[for="roman"] {
+    //     top: 0;
+    //     text-transform: none;
+    //   }
 
-    input {
-      border-style: none;
-      background: transparent;
-      border-bottom: 1px solid $color_white;
-      width: 100%;
-      position: relative;
-      outline: none;
-      padding: 10px 0;
-      color: white;
-      font-size: 18px;
-      margin-bottom: 30px;
+    //   input {
+    //     border-style: none;
+    //     background: transparent;
+    //     border-bottom: 1px solid $color_white;
+    //     width: 100%;
+    //     position: relative;
+    //     outline: none;
+    //     padding: 10px 0;
+    //     color: white;
+    //     font-size: 18px;
+    //     margin-bottom: 30px;
 
-    }
+    //   }
 
+    // }
+
+    // input[type="radio"] {
+    //   top: 10px;
+    //   left: -40px;
+    // }
+
+    // input[type="submit"] {
+    //   background: transparent;
+    //   color: white;
+    //   border-spacing: none;
+    //   border: 1px solid white;
+    //   padding: 10px 20px;
+    //   font-size: 16px;
+    //   border-radius: 3px;
+    //   outline: none;
+    //   cursor: pointer;
+    //   transition: 0.3s;
+
+    //   &:hover {
+    //     background: $color_bg;
+    //     border: 1px solid $color_bg;
+    //     transition: 0.3s;
+    //   }
   }
 
-  input[type="radio"] {
-    top: 10px;
-    left: -40px;
-  }
-
-  input[type="submit"] {
-    background: transparent;
-    color: white;
-    border-spacing: none;
-    border: 1px solid white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-      background: $color_bg;
-      border: 1px solid $color_bg;
-      transition: 0.3s;
-    }
+  .modal-bodyBlock {
+    padding: 25px;
   }
 }
 

@@ -41,7 +41,7 @@ main {
       display: flex;
       flex-direction: column;
       padding: 25px;
-      margin-bottom: 50px;
+      margin-bottom: 25px;
 
       .news {
         text-align: center;
@@ -88,20 +88,38 @@ main {
         }
       }
 
-      .button {
-        width: 100px;
-        background: #e67e22;
-        color: $color_white;
-        margin: auto;
+      .buttonList {
         display: flex;
         justify-content: center;
-      }
 
-      .button-actu {
-        width: 200px;
+        .button {
+          width: auto;
+          background: #e67e22;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+          font: 700 14px $roboto;
+          color: $color_white;
+
+          &:hover {
+            color: $color_grey;
+          }
+        }
       }
     }
   }
+}
+
+.button {
+  width: auto;
+  background: #e67e22;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font: 700 14px $roboto;
+  color: $color_white;
 }
 
 .imgSlide {
