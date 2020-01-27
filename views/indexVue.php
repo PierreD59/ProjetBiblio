@@ -81,7 +81,7 @@
             <input class="form-control" type="text" placeholder="azertyuiop" name="alt" />
           </div>
           <div class="modal-footer">
-            <input class="btn button" type="submit" value="Ajouter un livre" />
+            <input class="btn button" type="submit" name="submit" value="Ajouter un livre" />
           </div>
         </form>
       </div>
