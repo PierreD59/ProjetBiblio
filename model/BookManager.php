@@ -70,6 +70,31 @@ class BookManager
     }
 
     /**
+     * Get one book by id or name
+     *
+     * @param $info
+     * @return Book
+     */
+    public function getBookByCategory($info)
+    {
+        $query = $this->getDB()->prepare('SELECT * FROM book WHERE category = :category');
+        $query->bindValue('category', $info, PDO::PARAM_STR);
+        $query->execute();
+        $dataBooks = $query->fetchAll(PDO::FETCH_ASSOC);
+        $arrayOfBooks = [];
+
+        foreach ($dataBooks as $dataBook) {
+            if ($dataBook['category'] == "Manga") {
+                $arrayOfBooks[] = new Manga($dataBook);
+            } elseif ($dataBook['category'] == "Comic") {
+                $arrayOfBooks[] = new Comic($dataBook);
+            } elseif ($dataBook['category'] == "Roman") {
+                $arrayOfBooks[] = new Roman($dataBook);
+            }
+        }
+        return $arrayOfBooks;
+    }
+    /**
      * List all books
      *
      * @return array $arrayOfBooks

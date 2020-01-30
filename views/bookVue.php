@@ -9,15 +9,15 @@
 </nav>
 
 <div class="container article">
-    <h2 class="news">Nos Shonen</h2>
+    <h2 class="news">Nos <?= $_GET['category'] ?>s</h2>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-book row m-0 p-0">
         <?php foreach ($books as $book) { ?>
             <div class="m-3 col-xs-12 col-sm-12 col-md-4 col-lg-3">
                 <a class="link card" href="detailBook.php?id=<?= $book->getId(); ?>&category=<?= $book->getCategory(); ?>"><img src="../assets/img/livre.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h2 class="card-title"><?= $book->getName() ?></h2>
-                        <p class="card-author"><?= $book->getAuthor() ?></p>
-                        <p class="card-text"><?= $book->getContent() ?></p>
+                        <p class="card-author">Author : <?= $book->getAuthor() ?></p>
+                        <p class="card-text"><?= $book->getCategory() ?></p>
                     </div>
                 </a>
             </div>

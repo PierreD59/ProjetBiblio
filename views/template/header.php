@@ -40,14 +40,6 @@
               <a class="nav-link" href="../controllers/galerie.php">Notre Galerie</a>
             </li>
           </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-user icon"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-shopping-basket icon"></i></a>
-            </li>
-          </ul>
         </div>
       </nav>
     </header>

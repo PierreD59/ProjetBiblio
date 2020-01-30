@@ -15,11 +15,5 @@ $db = Database::DB();
 $manager = new BookManager($db);
 $books = $manager->getBooks();
 
-if (isset($_GET['id'])) {
-    if (isset($_GET['category'])) {
-        $bookId = $_GET['id'];
-        $categoryBook = $_GET['category'];
-    }
-}
 
 include "../views/galerieVue.php";

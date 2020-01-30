@@ -9,7 +9,7 @@
 <div class="container article">
 
     <h1 class="news">Panneau de Configuration</h1>
-
+    <!-- Form Edit Book -->
     <div class="col-12 col-md-12 d-flex justify-content-center">
         <div class="col-12 col-md-6">
             <form method="post" action="configure.php?id=<?= $_GET['id'] ?>">

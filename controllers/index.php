@@ -14,6 +14,7 @@ spl_autoload_register('chargerClasse');
 $db = Database::DB();
 $manager = new BookManager($db);
 
+// Checking the form data to add a new object 
 
 if (isset($_POST['submit'])) {
     if (isset($_POST['name']) && !empty($_POST['name'])) {
@@ -35,7 +36,6 @@ if (isset($_POST['submit'])) {
                                 "author" => $author,
                                 "content" => $content,
                                 "category" => "Manga",
-                                "available" => "1",
                                 "image" => $image,
                                 "alt" => $alt,
                             ]);
@@ -47,7 +47,6 @@ if (isset($_POST['submit'])) {
                                 "author" => $author,
                                 "content" => $content,
                                 "category" => "Roman",
-                                "available" => "1",
                                 "image" => $image,
                                 "alt" => $alt,
                             ]);
@@ -59,7 +58,6 @@ if (isset($_POST['submit'])) {
                                 "author" => $author,
                                 "content" => $content,
                                 "category" => "Comic",
-                                "available" => "1",
                                 "image" => $image,
                                 "alt" => $alt,
                             ]);

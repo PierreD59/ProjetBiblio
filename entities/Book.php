@@ -8,7 +8,6 @@ abstract class Book
         $name,
         $author,
         $content,
-        $available,
         $category,
         $image,
         $alt;
@@ -94,17 +93,6 @@ abstract class Book
     }
 
     /**
-     * Set the value of available
-     *
-     * @return  self
-     */
-    public function setAvailable($available)
-    {
-        $this->available = $available;
-
-        return $this;
-    }
-    /**
      * Set the value of category
      *
      * @return  self
@@ -137,15 +125,6 @@ abstract class Book
         $this->alt = $alt;
 
         return $this;
-    }
-
-
-    /**
-     * Get the value of available
-     */
-    public function getAvailable()
-    {
-        return $this->available;
     }
 
     /**

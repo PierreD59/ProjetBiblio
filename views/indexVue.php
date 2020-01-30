@@ -17,8 +17,8 @@
           <a class="link card" href="detailBook.php?id=<?= $book->getId() ?>&category=<?= $book->getCategory() ?>"><img src="../assets/img/livre.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h2 class="card-title"><?= $book->getName() ?></h2>
-              <p class="card-author"><?= $book->getAuthor() ?></p>
-              <p class="card-text"><?= $book->getContent() ?></p>
+              <p class="card-author">Author : <?= $book->getAuthor() ?></p>
+              <p class="card-text"><?= $book->getCategory() ?></p>
             </div>
           </a>
         </div>
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal add book -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered " role="document">
     <div class="modal-content">
@@ -120,9 +120,9 @@
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 p-0 m-0">
       <div class="blockStat">
         <div class="iconStat"><i class="fas fa-book"></i></div>
-        <div class="counter" data-count="150">0</div>
+        <div class="counter" data-count="45">0</div>
         <div class="textIconstat">
-          <h2>Mangas vendu</h2>
+          <h2>Mangas lu</h2>
         </div>
       </div>
     </div>
@@ -130,9 +130,9 @@
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 p-0 m-0">
       <div class="blockStat">
         <div class="iconStat"><i class="fas fa-book"></i></div>
-        <div class="counter" data-count="100">0</div>
+        <div class="counter" data-count="12">0</div>
         <div class="textIconstat">
-          <h2>Comics vendu</h2>
+          <h2>Comics lu</h2>
         </div>
       </div>
     </div>
@@ -140,9 +140,9 @@
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 p-0 m-0">
       <div class="blockStat">
         <div class="iconStat"><i class="fas fa-book"></i></div>
-        <div class="counter" data-count="500">0</div>
+        <div class="counter" data-count="25">0</div>
         <div class="textIconstat">
-          <h2>Livres vendu</h2>
+          <h2>Livres lu</h2>
         </div>
       </div>
     </div>
