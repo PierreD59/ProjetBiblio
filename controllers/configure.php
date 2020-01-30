@@ -13,6 +13,8 @@ spl_autoload_register('chargerClasse');
 $db = Database::DB();
 $manager = new BookManager($db);
 
+
+// Checking form data to edit a new object 
 if (isset($_POST['submit'])) {
     if (isset($_GET['id'])) {
         if (isset($_POST['name']) && !empty($_POST['name'])) {
