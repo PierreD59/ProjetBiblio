@@ -14,10 +14,11 @@
       <?php
       foreach ($books as $book) { ?>
         <div class="m-3 p-0 col-xs-12 col-sm-12 col-md-4 col-lg-3">
-          <a class="link card" href="detailBook.php?id=<?= $book->getId() ?>&category=<?= $book->getCategory() ?>"><img src="../assets/img/livre.jpg" class="card-img-top" alt="...">
+          <a class="link card" href="detailBook.php?id=<?= $book->getId() ?>&category=<?= $book->getCategory() ?>">
+            <img src="<?= $book->getImage() ?>" class="card-img-top" alt="<?= $book->getAlt() ?>">
             <div class="card-body">
               <h2 class="card-title"><?= $book->getName() ?></h2>
-              <p class="card-author">Author : <?= $book->getAuthor() ?></p>
+              <p class="card-author">Auteur : <?= $book->getAuthor() ?></p>
               <p class="card-text"><?= $book->getCategory() ?></p>
             </div>
           </a>

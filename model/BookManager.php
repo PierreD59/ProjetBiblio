@@ -70,7 +70,7 @@ class BookManager
     }
 
     /**
-     * Get one book by id or name
+     * Get all books by category
      *
      * @param $info
      * @return Book
@@ -101,7 +101,7 @@ class BookManager
      */
     public function getBooks()
     {
-        $query = $this->getDB()->query('SELECT id, name, author, content, category FROM book LIMIT 3');
+        $query = $this->getDB()->query('SELECT id, name, author, content, category, image, alt FROM book LIMIT 3');
         $dataBooks = $query->fetchAll(PDO::FETCH_ASSOC);
         $arrayOfBooks = [];
 
